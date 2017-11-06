@@ -12,13 +12,13 @@
 - [x] Controller
 - [x] serviceExport
 - [x] mybatis
-      - [x] mapping
-      - [x] interceptor
+	- [x] mapping
+	- [x] interceptor
 
 
 - [x] esfClient
-      - [x] rpc
-      - [x] restful
+	- [x] rpc
+	- [x] restful
 
 
 - [x] kmem
@@ -91,7 +91,7 @@ class Plugin : AbstractPlugin() {
 
 每个类都自带log对象，可直接使用
 
-```koltin
+```kotlin
 class MyCtrl : AbstractExController() {
     fun index() {
     	//直接使用
