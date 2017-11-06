@@ -27,7 +27,6 @@ class EsfClientExtension : Extension {
         private val rpcProxyList = ArrayList<Pair<String, KClass<*>>>()
 
         override fun register(plugin: AbstractPlugin) {
-            println("添加RPC代理:${rpcProxyList.size}")
             rpcProxyList.forEach {
                 println("添加RPC代理:${it.first} -> ${it.second}")
                 ExtensionESFHelper.addRPCProxyExtension(plugin, it.second.java, it.first)
@@ -46,7 +45,6 @@ class EsfClientExtension : Extension {
         private val restfulProxyList = ArrayList<Pair<String, KClass<*>>>()
 
         override fun register(plugin: AbstractPlugin) {
-            println("添加restful代理:${restfulProxyList.size}")
             restfulProxyList.forEach {
                 println("添加restful代理:${it.first} -> ${it.second}")
                 ExtensionESFHelper.addRestfulProxyExtension(plugin, it.second.java, it.first)
