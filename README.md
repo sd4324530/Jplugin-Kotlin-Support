@@ -10,22 +10,22 @@
 ## 框架覆盖范围
 
 - [x] Controller
-- [x] serviceExport
-- [x] mybatis
-	- [x] mapping
-	- [x] interceptor
+- [x] ServiceExport
+- [x] Mybatis
+	- [x] Mapping
+	- [x] Interceptor
 
 
-- [x] esfClient
-	- [x] rpc
-	- [x] restful
+- [x] ESFClient
+	- [x] RPC
+	- [x] Restful
 
 
-- [x] kmem
-- [x] mq
-- [x] cppClient
-- [x] startup
-- [x] rule
+- [x] Kmem
+- [x] Mq
+- [x] CppClient
+- [x] Startup
+- [x] Rule
 
 
 
