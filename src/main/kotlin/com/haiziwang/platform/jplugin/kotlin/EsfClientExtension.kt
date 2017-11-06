@@ -34,10 +34,7 @@ class EsfClientExtension : Extension {
             }
         }
 
-        operator fun String.get(clazz: KClass<*>) {
-            println("RpcProxyExtension String.get")
-            rpcProxyList.add(this to clazz)
-        }
+        operator fun String.get(clazz: KClass<*>) = rpcProxyList.add(this to clazz)
     }
 
     /**
@@ -56,10 +53,7 @@ class EsfClientExtension : Extension {
             }
         }
 
-        operator fun String.get(clazz: KClass<*>) {
-            println("RestfulProxyExtension String.get")
-            restfulProxyList.add(this to clazz)
-        }
+        operator fun String.get(clazz: KClass<*>) = restfulProxyList.add(this to clazz)
     }
 }
 
