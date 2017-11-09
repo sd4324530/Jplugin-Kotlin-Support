@@ -479,3 +479,7 @@ fun AbstractExController.createCriteria() : Criteria {
             Criteria(Page(begin, pageSize.toLong()))
     }
 }
+
+const val ASC = " ASC"
+
+const val DESC = " DESC"
