@@ -1,3 +1,5 @@
+@file:Suppress("IMPLICIT_CAST_TO_ANY")
+
 package com.haiziwang.platform.jplugin.kotlin.ctrl
 
 import net.jplugin.ext.webasic.api.AbstractExController
