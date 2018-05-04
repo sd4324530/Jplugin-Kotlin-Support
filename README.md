@@ -2,7 +2,7 @@
 
 [![@peiyu on weibo](https://img.shields.io/badge/weibo-%40peiyu-red.svg)](http://weibo.com/1728407960)
 [![JDK 1.8](https://img.shields.io/badge/JDK-1.8-green.svg "JDK 1.8")]()
-[![Kotlin 1.2.40](https://img.shields.io/badge/Kotlin-1.2.40-green.svg "Kotlin 1.2.40")]()
+[![Kotlin 1.2.41](https://img.shields.io/badge/Kotlin-1.2.41-green.svg "Kotlin 1.2.41")]()
 [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
@@ -23,6 +23,7 @@
 
 - [x] Kmem
 - [x] Mq
+- [x] TMQ
 - [x] CppClient
 - [x] Startup
 - [x] Rule
@@ -33,6 +34,7 @@
 
 ```kotlin
 class Plugin : AbstractPlugin() {
+
     init {
         controller {
             "/test"[MyCtrl::class]
@@ -49,7 +51,7 @@ class Plugin : AbstractPlugin() {
                 +MysqlPageInterceptor::class
             }
         }
-        clientProxy {
+        esfClient {
             rpc {
                 "esf://KBDQE/rpc"[MyRpcProxy::class]
             }
@@ -62,6 +64,14 @@ class Plugin : AbstractPlugin() {
         }
         mq {
             "mq1"[MyMessageListener::class]
+        }
+        tmq {
+            producer {
+                +"testProducer"
+            }
+            consumer {
+                "testProducer"[TmqconsumerListener::class]
+            }
         }
         cppClient {
             +MyCppReq::class

@@ -2,6 +2,8 @@ package com.haiziwang.platform
 
 import com.haiziwang.platform.jplugin.kotlin.esfClient
 import com.haiziwang.platform.jplugin.kotlin.log.log
+import com.haiziwang.platform.kms.client.consumer.api.IKmsConsumerListener
+import com.haiziwang.platform.kms.client.consumer.bean.KmsConsumerMessage
 import net.jplugin.core.kernel.api.IStartup
 import net.jplugin.core.kernel.api.PluginError
 import net.jplugin.ext.webasic.api.AbstractExController
@@ -47,6 +49,13 @@ class MyStartUp : IStartup {
 
 class MyMessageListener : MessageListener {
     override fun onMessage(p0: Message?) {
+
+    }
+
+}
+
+class TmqconsumerListener : IKmsConsumerListener {
+    override fun onMessage(messageList: MutableList<KmsConsumerMessage>?) {
 
     }
 

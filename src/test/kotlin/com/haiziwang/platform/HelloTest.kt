@@ -39,6 +39,14 @@ class Plugin : AbstractPlugin() {
         mq {
             "mq1"[MyMessageListener::class]
         }
+        tmq {
+            producer {
+                +"testProducer"
+            }
+            consumer {
+                "testProducer"[TmqconsumerListener::class]
+            }
+        }
         cppClient {
             +MyCppReq::class
         }
