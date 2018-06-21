@@ -2,7 +2,7 @@
 
 [![@peiyu on weibo](https://img.shields.io/badge/weibo-%40peiyu-red.svg)](http://weibo.com/1728407960)
 [![JDK 1.8](https://img.shields.io/badge/JDK-1.8-green.svg "JDK 1.8")]()
-[![Kotlin 1.2.41](https://img.shields.io/badge/Kotlin-1.2.41-green.svg "Kotlin 1.2.41")]()
+[![Kotlin 1.2.50](https://img.shields.io/badge/Kotlin-1.2.41-green.svg "Kotlin 1.2.50")]()
 [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
