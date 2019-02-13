@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.3.10</kotlin.version>
+        <kotlin.version>1.3.21</kotlin.version>
         <junit.version>4.12</junit.version>
     </properties>
 
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>net.jplugin.mvn</groupId>
             <artifactId>jplugin-core</artifactId>
-            <version>1.7.0-SNAPSHOT</version>
+            <version>1.7.1-SNAPSHOT</version>
         </dependency>
 
 
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>com.haiziwang.platform</groupId>
             <artifactId>k-mem</artifactId>
-            <version>1.7.0-SNAPSHOT</version>
+            <version>1.7.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
@@ -55,6 +55,7 @@
             <artifactId>jplugin-mq</artifactId>
             <version>1.6.3-SNAPSHOT</version>
             <scope>provided</scope>
+
         </dependency>
 
         <dependency>
