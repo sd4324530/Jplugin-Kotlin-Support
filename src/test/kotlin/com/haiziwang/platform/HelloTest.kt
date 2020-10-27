@@ -53,6 +53,9 @@ class Plugin : AbstractPlugin() {
         startup {
             +MyStartUp::class
         }
+        configChangeHandler {
+            "*"[MyConfigChangeHandler::class]
+        }
         rule {
             "/test"[IMyService::class, MyService::class]
         }

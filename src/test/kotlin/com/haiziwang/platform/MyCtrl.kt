@@ -4,6 +4,8 @@ import com.haiziwang.platform.jplugin.kotlin.esfClient
 import com.haiziwang.platform.jplugin.kotlin.log.log
 import com.haiziwang.platform.kms.client.consumer.api.IKmsConsumerListener
 import com.haiziwang.platform.kms.client.consumer.bean.KmsConsumerMessage
+import net.jplugin.core.config.api.IConfigChangeContext
+import net.jplugin.core.config.api.IConfigChangeHandler
 import net.jplugin.core.kernel.api.IStartup
 import net.jplugin.core.kernel.api.PluginError
 import net.jplugin.ext.webasic.api.AbstractExController
@@ -56,6 +58,13 @@ class MyMessageListener : MessageListener {
 
 class TmqconsumerListener : IKmsConsumerListener {
     override fun onMessage(messageList: MutableList<KmsConsumerMessage>?) {
+
+    }
+
+}
+
+class MyConfigChangeHandler : IConfigChangeHandler {
+    override fun onChange(p0: IConfigChangeContext?) {
 
     }
 
