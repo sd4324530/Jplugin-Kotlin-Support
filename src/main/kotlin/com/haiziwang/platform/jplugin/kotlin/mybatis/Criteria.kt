@@ -118,10 +118,10 @@ class Criteria : PageCondition {
         fun addCriterion(condition: String) = criterions.add(Criterion(condition))
 
         fun addCriterion(condition: String, value: Any) = criterions.add(Criterion(condition, value))
-        fun addCriterion(condition: String, value: Any, property: String) = criterions.add(Criterion(condition, value))
+//        fun addCriterion(condition: String, value: Any, property: String) = criterions.add(Criterion(condition, value))
 
         fun addCriterion(condition: String, value1: Any, value2: Any) = criterions.add(Criterion(condition, value1, value2))
-        fun addCriterion(condition: String, value1: Any, value2: Any, property: String) = criterions.add(Criterion(condition, value1, value2))
+//        fun addCriterion(condition: String, value1: Any, value2: Any, property: String) = criterions.add(Criterion(condition, value1, value2))
 
         fun andIsNull(columnName: String): Condition {
             addCriterion(columnName + " is null")
@@ -347,7 +347,7 @@ class Criteria : PageCondition {
          */
         fun andLikeInsensitive(columnName: String, value: String): Condition {
             if (value.isNotEmpty()) {
-                addCriterion(UPPER_LEFT + columnName + UPPER_RIGHT, ANY_MATCH + value.toUpperCase() + ANY_MATCH, columnName)
+                addCriterion(UPPER_LEFT + columnName + UPPER_RIGHT, ANY_MATCH + value.uppercase() + ANY_MATCH, columnName)
             }
             return this
         }
@@ -361,7 +361,7 @@ class Criteria : PageCondition {
          */
         fun andLeftLikeInsensitive(columnName: String, value: String): Condition {
             if (value.isNotEmpty()) {
-                addCriterion(UPPER_LEFT + columnName + UPPER_RIGHT, value.toUpperCase() + ANY_MATCH, columnName)
+                addCriterion(UPPER_LEFT + columnName + UPPER_RIGHT, value.uppercase() + ANY_MATCH, columnName)
             }
             return this
         }
@@ -375,7 +375,7 @@ class Criteria : PageCondition {
          */
         fun andRightLikeInsensitive(columnName: String, value: String): Condition {
             if (value.isNotEmpty()) {
-                addCriterion(UPPER_LEFT + columnName + UPPER_RIGHT, ANY_MATCH + value.toUpperCase(), columnName)
+                addCriterion(UPPER_LEFT + columnName + UPPER_RIGHT, ANY_MATCH + value.uppercase(), columnName)
             }
             return this
         }
